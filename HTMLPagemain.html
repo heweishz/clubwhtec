@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+    <title>div float test</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/HTMLPage1.css"></link>
+
+    <link href="css/animate.css" rel="stylesheet">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="card.js"></script>
+    <style>
+     
+    </style>
+    
+</head>
+<body>
+
+        <?php
+        // define variables and set to empty values
+        $name = $email = $gender = $comment = $website = "";
+        
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          $name = test_input($_POST["name"]);
+          $email = test_input($_POST["email"]);
+          $website = test_input($_POST["website"]);
+          $comment = test_input($_POST["comment"]);
+          $gender = test_input($_POST["gender"]);
+        }
+        
+        function test_input($data) {
+          $data = trim($data);
+          $data = stripslashes($data);
+          $data = htmlspecialchars($data);
+          return $data;
+        }
+        ?>
+    <div id="container">
+
+         <div id="header">
+             
+            <div id="logo">
+                <a>logo</a>
+            </div>
+             <div class="gap"></div>
+             <div id="banner">
+                 <a>搣梁科技</a>
+                
+             </div>
+             <div class="gap"></div>
+            <div id="tool">
+                <a>tool</a>
+            </div>   
+             <div class="nav"></div>
+            <div id="menu">
+                <div id="tit">
+                <ul>
+                    <li class="titin"><a href="card.php?cid=1">contact us</a></li>
+                    
+                    <li><a href="card.php?cid=1">contact us</a></li>
+                    
+                    <li><a href="card.php?cid=1">contact us</a></li>
+                    
+                    <li><a href="card.php?cid=1">contact us</a></li>
+                    
+                    <li><a href="card.php?cid=1">contact us</a></li>
+                    
+                    <li><a class="zoomInUp" id="hepai1" href="card.php?cid=1">contact us</a></li>
+                </ul>
+                </div>
+                <div id="content">
+
+                </div>
+            </div>
+          </div>     
+        <div class="nav"></div>
+         <div id="main">
+             <div class="leftbox">
+                 <div class="left">
+                     <video class="bounceOut" id="hepai2" align=left src="image/1.mp4" controls="controls">
+                         
+                     </video>
+                 </div>
+                 <div class="right">
+                     <div class="zoomInUp" >
+                        <video class="bounceOut" id="hepai" align=left src="image/3.mp4" controls="controls">
+                         
+                        </video>
+                     </div>
+                 </div>
+                 <div class="nav"></div>
+
+                 <div class="leftandright" >
+                     <frameset>
+                         <iframe height="400px" width="200px"  align=left resize=none src="http://www.baidu.com"></iframe>
+                     </frameset>
+                 </div>
+                 
+             </div>
+             <div class="rightbox">
+                 <div class="left">
+                     Hire, manage and coach Vice Presidents of Technical Product Management
+                     Create, standardize and drive an ideation process producing market defining, technology fueled, differentiated products delivering measurable customer value
+                     Ability to build “expert level” knowledge in a technical domain area
+                     Set and maintain the quality bar for product specifications favoring simplicity and clarity and removing distractions, over-architecture, and bad design decisions
+                     Synthesize inputs, communicate strategic direction, and validate assumptions with internal and external stakeholders
+                     Establish feasibility with Engineering teams early in the process to avoid delays and last minute scope change
+                 </div>
+                 <div class="right">
+                     <script>
+                        function changeImage() {
+                            element = document.getElementById('myimage')
+                            if (element.src.match("bulbon")) {
+                                element.src = "image/bulboff.gif";
+                            }
+                            else {
+                                element.src = "image/bulbon.gif";
+                            }
+                        }
+                     </script>
+                     <img id="myimage" onclick="changeImage()" src="image/bulboff.gif" width="100" height="150">
+                     <p>点击灯泡就可以打开或关闭这盏灯</p>
+                 </div>
+                 <div class="nav"></div>
+
+                 <div class="left">
+                     <?php
+                     if (isset($_POST['submit'])){
+                     echo PHP_VERSION;
+                     echo "<h2>Your Input:</h2>";
+                     echo $name;
+                     echo "<br>";
+                     echo $email;
+                     echo "<br>";
+                     echo $website;
+                     echo "<br>";
+                     echo $comment;
+                     echo "<br>";
+                     echo $gender;
+                     }
+
+                     ?>
+
+                 </div>
+                 <div class="right">
+                     
+                     <?php
+                     if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE ||
+                     strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== FALSE) {
+                     ?>
+                     <h3>strpos() must have returned non-false</h3>
+                     <p>You are using Internet Explorer</p>
+                     <?php
+                     } else {
+                     ?>
+                     <h3>strpos() must have returned false</h3>
+                     <p>You are not using Internet Explorer</p>
+                     <?php
+                     }
+                     ?> 
+
+
+                 </div>
+
+             </div>
+          </div>
+        <div class="nav"></div>
+        <div id="footer">
+
+            <div class="left">
+                <form action="connectmysql.php" method="post">
+                    Name: <input type="text" name="name"><br>
+                    E-mail: <input type="text" name="email"><br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="right">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                    Name: <input type="text" name="name"><br>
+                    E-mail: <input type="text" name="email"><br>
+                    Website: <input type="text" name="website"><br>
+                    Comment: <textarea name="comment" rows="5" cols="40"></textarea><br>
+                    Gender:
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="other">Other <br>
+                    <input type="submit" name="submit">
+                    # edited by williampc
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
