@@ -1,86 +1,120 @@
 body {
   background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
 }
 
 #hero {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/img/StockSnap_T2VQ2QPA3R-mobile.jpg");
+  background-image: url("../../assets/img/hero-mobile.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  color: #333;
 }
 
 @media (min-width: 768px) {
   #hero {
-    background-image: url("../../assets/img/StockSnap_T2VQ2QPA3R.jpg");
+    background-image: url("../../assets/img/hero.jpg");
   }
 }
 
 .navbar-light .navbar-brand {
+  background-image: url("../../assets/img/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  width: 130px;
+  height: 20px;
 }
 
-.nav.navbar-nav.mx-auto {
+#navcol-1 {
+  font-size: 13px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #222;
+  padding: 10px;
 }
 
 #title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+#subtitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 46px;
+  font-weight: bold;
 }
 
 #hero-bottom {
   color: #fff;
 }
 
+.p-top {
+  font-size: 26px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.p-bot {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.reserve-button:hover, .reserve-button:focus, .reserve-button:active {
+  background-color: rgba(0,98,204,0) !important;
+  border: 3px solid #fff !important;
+  box-shadow: none !important;
+}
+
 .reserve-button {
-  border: 3px solid;
+  background-color: rgba(0,98,204,0);
+  border: 3px solid #fff;
   border-radius: 30px;
 }
 
+.btn.btn-link.btn-block.arrow-button {
+  color: rgb(255,255,255);
+  font-size: 32px;
+}
+
 #hero-bottom .container {
+  max-width: 700px;
+  text-align: center;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: #f9f7f7;
-}
-
-.col.with-border {
-  border: 1px solid rgba(255,255,255,0.32);
-  border-bottom: 0px;
-  border-top: 0px;
+.col.with-borders {
+  border: 1px solid rgba(255,255,255,0.2);
+  border-top: 0;
+  border-bottom: 0;
 }
 
 #video-and-stats {
   text-align: center;
 }
 
-#video-and-stats iframe {
+#stats {
   width: 90%;
-  height: 400px;
-}
-
-@media (min-width: 992px) {
-  #video-and-stats iframe {
-    width: 900px;
-    height: 500px;
-  }
+  margin: 0 auto;
+  margin-bottom: 150px;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {
   #stats {
     width: 600px;
     margin: 0 auto;
-    color: rgb(228,235,241);
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     font-size: 15px;
   }
-}
-
-#stats {
-  width: 90%;
-  margin: 0 auto;
-  color: rgb(228,235,241);
-  margin-bottom: 150px;
-  font-size: 15px;
 }
 
 #stats .table thead th {
@@ -100,18 +134,6 @@ body {
   padding-right: 0;
 }
 
-@media (min-width: 768px) {
-  #aero {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../../assets/img/back.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-  }
-}
-
 #aero {
   width: 100%;
   height: 100vh;
@@ -119,7 +141,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
 }
 
 #aero .container {
@@ -127,8 +148,12 @@ body {
 }
 
 #aero .h3, h3 {
-  font-size: 28px;
   font-family: Montserrat, sans-serif;
+}
+
+#interior {
+  width: 100%;
+  height: 60vh;
 }
 
 @media (min-width: 768px) {
@@ -138,9 +163,8 @@ body {
   }
 }
 
-#interior {
-  width: 100%;
-  height: 60vh;
+#interior .figure {
+  max-width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -149,18 +173,15 @@ body {
   }
 }
 
-#interior .figure {
-  max-width: 90%;
-}
-
 #interior .figure-caption {
-  color: white;
+  color: rgb(255,255,255);
+  margin-top: 15px;
 }
 
-#interior-title {
-  margin-right: 15px;
+#caption-title {
+  margin-right: 20px;
+  font-size: 20px;
   font-family: Montserrat, sans-serif;
-  font-size: 19px;
 }
 
 #topview {
@@ -170,10 +191,29 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: rgb(249,251,252);
 }
 
 #topview .container {
   margin-bottom: 150px;
+}
+
+#topview .h4, h4 {
+  font-family: Montserrat, sans-serif;
+}
+
+#topview p {
+  font-weight: 100;
+}
+
+#video-and-stats video {
+  height: 400px;
+  width: 90%;
+}
+
+@media (min-width: 992px) {
+  #video-and-stats video {
+    height: 500px;
+    width: 900px;
+  }
 }
 
