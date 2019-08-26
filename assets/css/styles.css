@@ -6,7 +6,7 @@ body {
 #hero {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/img/hero-mobile.jpg");
+  background-image: url("../../assets/img/StockSnap_T2VQ2QPA3R-mobile.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body {
 
 @media (min-width: 768px) {
   #hero {
-    background-image: url("../../assets/img/hero.jpg");
+    background-image: url("../../assets/img/StockSnap_T2VQ2QPA3R.jpg");
   }
 }
 
@@ -101,6 +101,18 @@ body {
   text-align: center;
 }
 
+#video-and-stats video {
+  height: 400px;
+  width: 90%;
+}
+
+@media (min-width: 992px) {
+  #video-and-stats video {
+    height: 500px;
+    width: 900px;
+  }
+}
+
 #stats {
   width: 90%;
   margin: 0 auto;
@@ -137,7 +149,7 @@ body {
 #aero {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/img/back.jpg");
+  background-image: url("../../assets/img/oscar-nilsson-W-oqNwbmin0-unsplash.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -187,7 +199,7 @@ body {
 #topview {
   width: 100%;
   height: 120vh;
-  background-image: url("../../assets/img/top.jpg");
+  background-image: url("../../assets/img/StockSnap_ICPTTVBVMQ.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -205,15 +217,4 @@ body {
   font-weight: 100;
 }
 
-#video-and-stats video {
-  height: 400px;
-  width: 90%;
-}
-
-@media (min-width: 992px) {
-  #video-and-stats video {
-    height: 500px;
-    width: 900px;
-  }
-}
 
