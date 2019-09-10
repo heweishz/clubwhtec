@@ -3,218 +3,20 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   
-    <title>搣梁科技</title>
+    <title>div float test</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="./css/HTMLPage1.css"></link>
-    <link rel="icon" href="image/favaicon.ico">
+
     <link href="css/animate.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css"/>
     <script src="jquery-3.3.1.js"></script>
-    <script src="dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="card.js"></script>
-    <script src="dist/vue.min.js"></script>
     <style>
-        .mystle{height:20px;border:1px solid}
+     
     </style>
-    <script>
-        window.onload = function(){
-            var tblEle = document.getElementById("tbl");
-            var len = tblEle.tBodies[0].rows.length;
-            alert(len);
-            for(var i=0;i<len;i++){
-                if(i%2==0){
-                    tblEle.tBodies[0].rows[i].style.backgroundColor="pink";
-                }
-            }
-        }
-        // $(function(){
-        //     $(span1).html("learned");
-        // })
-        function filljs(){
-            document.getElementById(span1).innerHTML="foget";
-        }
-        
-    </script>
     
 </head>
 <body>
-        <a href="./app-debug.apk">link</a>
-        <input type="button" value="click me to fill content by js" onclick="filljs()" />
-    <input type="button" value="click me to fill content" />
-    william:<span id="span1" style="margin-bottom:180px">learning</span>
-        <?php
-        rename("F:/movie/0.flv", "F:/movie/白蛇缘起.flv");
-        ?> 
-        <div id="app" >
-                <p>{{ message }}</p>
-        </div>
-        <script>
-                new Vue({
-                  el: '#app',
-                  data: {
-                    message: 'Hello Vue.js!'
-                  }
-                })
-        </script>
-        <div>
-        <table border="1" width="500" height="50" align="center" id="tbl">
-        <thead style="color:blue">
-            <tr style="border:1px solid">
-                <th>name</th>
-                <th>job</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>william</th>
-                <th>freelance</th>
-            </tr>
-            <tr>
-                <th>jack</th>
-                <th>freelance</th>
-            </tr>
-            <tr>
-                <th>sunny</th>
-                <th>freelance</th>
-            </tr>
-            <tr>
-                <th>kissy</th>
-                <th>freelance</th>
-            </tr>
-            <tr>
-                <th>anymony</th>
-                <th>freelance</th>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>all</th>
-                <th>nsh</th>
-            </tr>
-        </tfoot>
-        </table>
-        </div>
-        <?php
-        $str="this is a regix https://www.baidu.com 
-        this is a regix https://www.google.com 
-        this is a regix https://www.youtube.com 
-        this is a regix https://www.castbox.com 
-        this is a regix https://www.ximalaya.com 
-        this is a regix https://www.amazon.com 
-        this is a regix https://www.bing.com 
-        this is a regix https://www.bilibili.com 
-        ";
-        
-        $urls = "/(https?|ftps?):\/\/((www|mail|news)\.([^\.\/]+)\.(com|org|net))/i";
-        if(preg_match_all($urls,$str,$arr)){
-            echo "str contain corect urls info<br>";
-            echo '<pre>';
-            print_r($arr);
-            echo '</pre>';
-            echo 'host:'.$arr[2][0]."<br>";
-        }else{
-            echo "str don't contain urls";
-        }
-        echo $str."<br>";
-        echo "<div align='center'>.$str.<br>.</div>";
-        function setUrls($str){
-            $urls = "/(https?|ftps?):\/\/((www|mail|news)\.([^\.\/]+)\.(com|org|net))/i";
-            preg_match_all($urls,$str,$arr,PREG_PATTERN_ORDER);
-            /*foreach ($arr[0] as $urls){*/
-                $str=str_replace($arr[0],'<a href="http://www.baidu.com">www.baidu.com</a>',$str);	
-            /*}*/
-                    echo $str."<br>";
-        }
-        setUrls($str);
 
-
-        ?>
-
-        <?php
-        $reg = "/\d{4}(\W)\d{2}\\1\d{2}\s+\d{2}\W\d{2}\W\d{2}\s+(?:am|pm)/";
-        $object = "today is 2019-02-28 17/01:55 pm...";
-        if(preg_match($reg,$object,$arr))
-            {echo "regworks.<br>";
-            echo "<pre>";
-                    print_r ($arr);
-                    echo $arr[0];
-            echo "</pre>";
-            }else 
-            {echo "<fond color = 'red'>regdon't works</fond>.<br>";}
-
-            $str1=file_get_contents("http://www.baidu.com");
-            preg_match_all('/\<img\s+src=.*?\s*\/?\>/i',$str1,$images);
-            echo '<pre>';
-                print_r($images);
-            echo '</pre>';
-        ?>
-        <dl class="text-left">
-            <dt>language</dt>
-            <dd >JavaScript</dd>
-            <dd>CSS</dd>
-            <dd>Html</dd>
-        </dl>
-        <dl class="dl-horizontal">
-            <dt>language when it's width over 160px,content would display in abbr</dt>
-            <dd>JavaScript</dd>
-            <dd>CSS</dd>
-            <dd>Html</dd>
-        </dl>
-        <div class="container" style="height:20px;border:1px solid"></div>
-        <div class="container-full" style="height:20px; border:1px solid"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mystle col-lg-push-1">first row .col-md-4</div>
-                <div class="col-lg-6 mystle">first row .col-md-6</div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-4 mystle">second row .col-md-4</div>
-                    <div class="col-lg-4 mystle">second row .col-md-4</div>
-                    <div class="col-lg-4 mystle">second row .col-md-4</div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-3 mystle">third row .col-md-3</div>
-                    <div class="col-lg-6 mystle">third row .col-md-6</div>
-                    <div class="col-lg-3 mystle">third row .col-md-3</div>
-            </div>
-        </div>
-    <?php
-        echo filetype('css')."<br>";
-        echo filetype("js/index.js")."<br>";
-        if(is_readable("C:\Windows\System32\sk-SK\comdlg32.dll.mui")){
-            echo "这是一个目录"."/ ";
-        }else{
-            echo "这是一个文件"."/ ";
-        }
-        echo filectime("js/index.js")."<br>";
-        function getFileProperty($fileName){
-            if(!file_exists($fileName)){
-            echo "file or dir{$fileName} none exist<br>";
-            return;
-            }
-            if(is_file($fileName)){
-            echo "this is a file<br>";
-            echo "the size of this file is ".filesize($fileName)."<br>";
-            }
-            if(is_dir($fileName)){
-                echo "this is a directionary"."<br>";
-            }
-            if(is_readable($fileName)){
-                echo "this file is readable"."<br>";
-            }
-            if(is_writable($fileName)){
-                echo "this file is writable"."<br>";
-            }
-            if(is_executable($fileName)){
-                echo "this file is is_executable"."<br>";
-            }
-            echo "creation of this file:".filectime($fileName)."<br>";
-            echo "modification of this file:".filemtime($fileName)."<br>";
-            echo "latest visition of this file:".fileatime($fileName)."<br>";
-        }
-        getFileProperty("js/index.js");
-    ?>    
         <?php
         // define variables and set to empty values
         $name = $email = $gender = $comment = $website = "";
@@ -234,31 +36,21 @@
           return $data;
         }
         ?>
-
     <div id="container">
 
-        
-               
          <div id="header">
              
             <div id="logo">
-                <img src="image/whlogo.jpg" alt="imagestoredinremote" width="100%" height="100%">
+                <a>logo</a>
             </div>
-
              <div class="gap"></div>
              <div id="banner">
-                 <img src="image/whbanner.jpg" alt="imagestoredinremote" width="100%" height="100%">
+                 <a>搣梁科技</a>
+                
              </div>
              <div class="gap"></div>
-
             <div id="tool">
-                <select id="select">
-                        <option value ="normal">normal -- 正常</option>
-                        <option value ="multiply">multiply -- 正片叠底</option>
-                        <option value="screen">screen -- 滤色</option>
-                </select>        
                 <a>tool</a>
-                
             </div>   
              <div class="nav"></div>
             <div id="menu">
@@ -287,36 +79,33 @@
              <div class="leftbox">
                  <div class="left">
                      <video class="bounceOut" id="hepai2" align=left src="image/1.mp4" controls="controls">
-                         your browser does not support the video tag
+                         
                      </video>
                  </div>
                  <div class="right">
-                     <!-- <div class="zoomInUp" id="hepai">
-                         <img src="image/电脑维护工程师图片.jpg" alt="imagestoredinremote" width="100%" height="100%">
-                     </div>-->
-                    <div id="three-container"></div>
-                    <script src='http://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
-                    <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
-                    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
-                    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js'></script>
-                    <script  src="js/index.js"></script>
+                     <div class="zoomInUp" >
+                        <video class="bounceOut" id="hepai" align=left src="image/3.mp4" controls="controls">
+                         
+                        </video>
+                     </div>
                  </div>
                  <div class="nav"></div>
 
                  <div class="leftandright" >
                      <frameset>
-                            <iframe height="400px" width="200px"  align=left resize=none src="http://www.163.com"></iframe>
-                        
+                         <iframe height="400px" width="200px"  align=left resize=none src="http://www.baidu.com"></iframe>
                      </frameset>
                  </div>
                  
              </div>
              <div class="rightbox">
                  <div class="left">
-                    <?php
-                    $ip = $_SERVER['REMOTE_ADDR'];
-                        echo $ip;
-                  ?>
+                     Hire, manage and coach Vice Presidents of Technical Product Management
+                     Create, standardize and drive an ideation process producing market defining, technology fueled, differentiated products delivering measurable customer value
+                     Ability to build “expert level” knowledge in a technical domain area
+                     Set and maintain the quality bar for product specifications favoring simplicity and clarity and removing distractions, over-architecture, and bad design decisions
+                     Synthesize inputs, communicate strategic direction, and validate assumptions with internal and external stakeholders
+                     Establish feasibility with Engineering teams early in the process to avoid delays and last minute scope change
                  </div>
                  <div class="right">
                      <script>
@@ -336,22 +125,22 @@
                  <div class="nav"></div>
 
                  <div class="left">
-                        <?php
-                        if (isset($_POST['submit'])){
-                            echo PHP_VERSION;
-                            echo "<h2>Your Input:</h2>";
-                            echo $name;
-                            echo "<br>";
-                            echo $email;
-                            echo "<br>";
-                            echo $website;
-                            echo "<br>";
-                            echo $comment;
-                            echo "<br>";
-                            echo $gender;
-                        }
+                     <?php
+                     if (isset($_POST['submit'])){
+                     echo PHP_VERSION;
+                     echo "<h2>Your Input:</h2>";
+                     echo $name;
+                     echo "<br>";
+                     echo $email;
+                     echo "<br>";
+                     echo $website;
+                     echo "<br>";
+                     echo $comment;
+                     echo "<br>";
+                     echo $gender;
+                     }
 
-                        ?>
+                     ?>
 
                  </div>
                  <div class="right">
@@ -378,115 +167,31 @@
           </div>
         <div class="nav"></div>
         <div id="footer">
-            
+
             <div class="left">
-            <form action="connectmysql.php" method="post">
-                Name: <input type="text" name="name"><br>
-                E-mail: <input type="text" name="age"><br>
-                <input type="submit">
-            </form>
+                <form action="connectmysql.php" method="post">
+                    Name: <input type="text" name="name"><br>
+                    E-mail: <input type="text" name="email"><br>
+                    <input type="submit">
+                </form>
             </div>
             <div class="right">
-                    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                            Name: <input type="text" name="name"><br>
-                            E-mail: <input type="text" name="email"><br>
-                            Website: <input type="text" name="website"><br>
-                            Comment: <textarea name="comment" rows="5" cols="40"></textarea><br>
-                            Gender:
-                                <input type="radio" name="gender" value="female">Female
-                                <input type="radio" name="gender" value="male">Male
-                                <input type="radio" name="gender" value="other">Other <br>
-                            <input type="submit" name="submit">
-                    </form>
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                    Name: <input type="text" name="name"><br>
+                    E-mail: <input type="text" name="email"><br>
+                    Website: <input type="text" name="website"><br>
+                    Comment: <textarea name="comment" rows="5" cols="40"></textarea><br>
+                    Gender:
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="other">Other <br>
+                    <input type="submit" name="submit">
+                    # edited by williampc
+                </form>
             </div>
         </div>
     </div>
-
-<script>
-        function myFunction()
-        {
-        try
-        { 
-        var x=document.getElementById("demo").value;
-        if(x=="")    throw "值为空";
-        if(isNaN(x)) throw "不是数字";
-        if(x>10)     throw "太大";
-        if(x<5)      throw "太小";
-        }
-        catch(err)
-        {
-        var y=document.getElementById("mess");
-        y.innerHTML="错误：" + err + "。";
-        }
-        }
-</script>
-
-
-
-
-<h1>我的第n个 JavaScript 程序</h1>
-<p>请输入 5 到 10 之间的数字：</p>
-<input id="demo" type="text">
-<button type="button" onclick="myFunction()">测试输入值</button>
-<p id="mess"></p>
-
-<div>
-    <p>Please complete this form to submit your feedback:</p>
-    <form action = "handle_form.php" method="POST">
-        <p>Name: <select name="title">
-            <option value="Mr.">Mr.</option>
-            <option value="Mrs.">Mrs.</option>
-            <option value="Ms.">Ms.</option>
-        </select><input type="text" name="name" size="20" /> </p>
-    <p>Email Address:<input type="text" name="email" size="20"></p>
-    <p>Response: This is ...
-        <input type="radio" name="response" value="excellent" />excellent
-        <input type="radio" name="response" value="okay" />okay
-        <input type="radio" name="response" value="boring" />boring
-    </p>
-    <p>Comments: <textarea name="comments" rows="3" cols="30"></textarea></p>
-    <input type="submit" name="submit" value="Send My Feedback" />
-    </form>
-</div>>
-<pre>
-<?php
-    if(!file_exists("count.txt")){
-        $one_file=fopen("count.txt","w+"); //建立一个统计文本，如果不存在就创建
-        echo"您是第<font color='red'><b>1</b></font>位访客"; //首次直接输出第一次
-        fwrite("count.txt","1");  //把数字1写入文本
-        fclose("$one_file");
-     }else{ //如果不是第一次访问直接读取内容，并+1,写入更新后再显示新的访客数
-        $num=file_get_contents("count.txt");
-        $num++;
-        file_put_contents("count.txt","$num");
-        $newnum=file_get_contents("count.txt");
-        echo"您是第<font color='red'><b>".$newnum."</b></font>位访客";
-        echo "<br>";
-        print_r ($_SERVER);
-    }
-
-    $current = "$ip\n";
-    /*file_put_contents("ip.txt","$current .");*/
-    echo $current . $num;
-    file_put_contents("ip.txt", $current . "_" . $num ."_", FILE_APPEND | LOCK_EX);
-
-    $str=file_get_contents("https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9864539306192877206%22%7D&n_type=0&p_from=1");
-
-    preg_match_all('/\<img\s+src=.*?\s*\/?\>/i',$str,$images);
-
-    echo '<pre>';
-        print_r($images);
-    echo '</pre>';
     
-?>
-<form enctype="multipart/form-data" action="upload.php" method="POST">
-    <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
-    Send this file: <input name="userfile" type="file" />
-    <input type="submit" value="Send File" />
-</form>
-</pre> 
-
-
 
 </body>
 </html>
