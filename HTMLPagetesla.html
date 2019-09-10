@@ -16,6 +16,53 @@
 </head>
 
 <body>
+    <section id="test">
+        <?php
+            // date_default_timezone_set('America/Los_angeles');
+            // echo date('h:i:sa');
+            //$timestamp = mktime(1,2,3,13,2,1981);
+            //echo date('d/m/Y h:i:sa',$timestamp);
+            //$timestamp2 = strtotime('1:55pm Aug 26 2019');
+            //$timestamp3 = strtotime('tomorrow');
+            #echo date('d/m/Y h:i:sa',$timestamp3);
+            $server = [
+                'Host Server Name' => $_SERVER['SERVER_NAME'],
+                'Host Header' =>$_SERVER['HTTP_HOST'],
+                'Server Software' => $_SERVER['SERVER_SOFTWARE'],
+                'Document Root'=>$_SERVER['DOCUMENT_ROOT']
+            ];
+            
+            echo PHP_EOL;
+            #echo '<br>';
+            #echo $server['Server Software'];
+            print_r($server);
+            echo '<br>';
+            //echo $_SERVER['REMOTE_PORT'];
+            /*$output = strrpos('hello','lo');
+            echo $output;
+            $text = 'ello world    ';
+            //var_dump($text);
+            //$trimmed=ucwords($text);
+            //var_dump($trimmed);*/
+            /*
+            $output = str_replace('world','everyone',$text); 
+            echo $output;
+            $text= 33 ;
+            $output = is_string($text);
+            echo $output;*/
+            /*$values = array(true,false,null,'abc',33,'33',22.4,'22.4','',' ',0,'0');
+            foreach($values as $value){
+                if(is_string($value)){
+                    echo "$value is a string  <br>";
+                }
+            }*/
+            $loggedIn = false;
+            echo ($loggedIn) ? 'You are logged in':'You are NOT logged in';
+            
+
+
+        ?>
+    </section>
     <section class="d-flex flex-column justify-content-between" id="hero">
         <div id="hero-top">
             <nav class="navbar navbar-light navbar-expand-md">
